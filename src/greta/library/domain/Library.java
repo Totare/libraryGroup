@@ -1,4 +1,4 @@
-package com.company;
+package greta.library.domain;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,12 +40,10 @@ public class Library {
     }
 
     public void showUnavailable() {
-
         for (Map.Entry<String, Book> book : books.entrySet()) {
             if (!book.getValue().isAvailable()) {
                 System.out.println(book);
             }
-
         }
 
     }

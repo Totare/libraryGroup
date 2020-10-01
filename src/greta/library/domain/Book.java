@@ -1,4 +1,4 @@
-package com.company;
+package greta.library.domain;
 
 import java.util.Objects;
 
@@ -13,6 +13,10 @@ public class Book {
         this.author = author;
         this.isbn = isbn;
         this.available = available;
+    }
+
+    public boolean isAvailable() {
+        return available;
     }
 
     public void setAvailable() {
@@ -49,7 +53,4 @@ public class Book {
                 '}';
     }
 
-    public boolean isAvailable() {
-        return available;
-    }
 }
