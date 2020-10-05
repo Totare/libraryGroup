@@ -2,9 +2,14 @@ package greta;
 
 import greta.library.ui.Display;
 
-public class Main {
-
-    public static void main(String[] args) {
+/**
+ * Start App!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
         Display display = new Display();
     }
 }

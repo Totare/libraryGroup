@@ -5,9 +5,10 @@ import java.util.Map;
 
 public class Library {
 
-    private Map<String, Book> books =  new HashMap<String, Book>();
+    private Map<String, Book> books;
 
     public void addBook(String name, String author, String isbn) {
+        books = new HashMap<String, Book>();
         Book book = new Book(name, author, isbn, true);
 
         if (books.containsKey(isbn)){
@@ -18,20 +19,20 @@ public class Library {
     }
 
     public void borrow(String isbn) {
-        Book currentbook = books.get(isbn);
-        if (!currentbook.isAvailable()){
+        Book book = books.get(isbn);
+        if (!book.isAvailable()){
             System.out.println("Le livre n'est pas dispo !");
         } else {
-            currentbook.setUnAvailable();
+            book.setUnavailable();
         }
     }
 
     public void giveBack(String isbn) {
-        Book currentbook = books.get(isbn);
-        if (currentbook.isAvailable()){
+        Book book = books.get(isbn);
+        if (book.isAvailable()){
             System.out.println("Le livre est deja present !");
         } else {
-            currentbook.setAvailable();
+            book.setAvailable();
         }
     }
 

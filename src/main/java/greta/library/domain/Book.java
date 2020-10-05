@@ -3,9 +3,9 @@ package greta.library.domain;
 import java.util.Objects;
 
 public class Book {
-    private String name;
-    private String author;
-    private String isbn;
+    private final String name;
+    private final String author;
+    private final String isbn;
     private boolean available;
 
     public Book(String name, String author, String isbn, boolean available) {
@@ -23,7 +23,7 @@ public class Book {
         this.available = true;
     }
 
-    public void setUnAvailable() {
+    public void setUnavailable() {
         this.available = false;
     }
 
